@@ -10,7 +10,7 @@ app = Flask(__name__)
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 # OpenWeatherMap API configuration
-BASE_URL = "http://api.openweathermap.org/data/2.5"
+BASE_URL = os.getenv("BASE_URL", "http://api.openweathermap.org/data/2.5")
 
 # Sample weather data for demonstration (remove when using real API)
 SAMPLE_WEATHER_DATA = {
